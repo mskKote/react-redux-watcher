@@ -1,6 +1,6 @@
-﻿using ReactReduxDocsNotifyer.Model;
+﻿using ReactReduxWatcher.Model;
 
-namespace ReactReduxDocsNotifyer.Services;
+namespace ReactReduxWatcher.Services;
 
 public interface IReactReduxRepoService
 {

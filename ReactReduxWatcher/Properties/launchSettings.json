@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ReactReduxDocsNotifyer": {
+    "ReactReduxWatcher": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

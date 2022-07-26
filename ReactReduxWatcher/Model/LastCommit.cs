@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ReactReduxDocsNotifyer.Model;
+namespace ReactReduxWatcher.Model;
 
 public sealed record LastCommit(CommitInfo Commit, IEnumerable<CommitFile> Files, string Url);
 public sealed record CommitFile(string FileName);

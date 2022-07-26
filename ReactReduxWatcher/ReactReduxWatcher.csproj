@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-        <RootNamespace>ReactReduxDocsNotifyer</RootNamespace>
+        <RootNamespace>ReactReduxWatcher</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

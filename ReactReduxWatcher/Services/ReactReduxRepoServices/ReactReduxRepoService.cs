@@ -1,9 +1,9 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
-using ReactReduxDocsNotifyer.Model;
+using ReactReduxWatcher.Model;
 using RestSharp;
 
-namespace ReactReduxDocsNotifyer.Services;
+namespace ReactReduxWatcher.Services;
 
 public class ReactReduxRepoService : IReactReduxRepoService
 {
@@ -25,7 +25,7 @@ public class ReactReduxRepoService : IReactReduxRepoService
     private async Task<LastCommit> GetLastCommit()
     {
         // Receive last commit
-        var url = _configuration.GetValue<string>("LastCommitURL");
+        var url = _configuration.GetValue<string>("LAST_COMMIT_URL");
         var client = new RestClient(url);
         var request = new RestRequest { Method = Method.Get };
         var response = await client.ExecuteAsync(request);
@@ -46,22 +46,7 @@ public class ReactReduxRepoService : IReactReduxRepoService
      */
     private bool HasDocumentationChange(LastCommit commit)
     {
-        var stringBuilder = new StringBuilder();
-        stringBuilder.AppendLine("------- COMMIT FILES -------");
-
-        // return commit.Files.Any(x => x.FileName.StartsWith("/docs"));
-        foreach (var file in commit.Files)
-        {
-            stringBuilder.AppendLine(file.FileName);
-            // if (!file.FileName.StartsWith("/docs"))
-            // {
-            //     return false;
-            // }
-        }
-        stringBuilder.AppendLine("----- COMMIT FILES END -----");
-        _logger.LogInformation(stringBuilder.ToString());
-
-        return true;
+        return commit.Files.Any(x => x.FileName.StartsWith("docs"));
     }
     
     public async Task<(bool, LastCommit)> CheckLastCommit()

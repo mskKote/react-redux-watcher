@@ -1,5 +1,5 @@
-using ReactReduxDocsNotifyer.Services;
-using ReactReduxDocsNotifyer.Services.NotifyServices;
+using ReactReduxWatcher.Services;
+using ReactReduxWatcher.Services.NotifyServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
