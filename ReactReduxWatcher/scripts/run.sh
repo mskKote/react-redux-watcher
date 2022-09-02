@@ -1,0 +1,1 @@
+﻿docker run -d -it -p 5000:80 $1
