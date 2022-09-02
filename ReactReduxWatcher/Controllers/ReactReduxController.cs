@@ -44,4 +44,10 @@ public sealed class  ReactReduxController : ControllerBase
             return $"ERROR // {e.Message}";
         }
     }
+    
+    [HttpGet("api/test-ping")]
+    public string Ping()
+    {
+        return "pong";
+    }
 }
